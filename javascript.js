@@ -22,6 +22,9 @@ eraseButton.addEventListener("click", () => {
     createPixels();
 });
 
+const rainbowButton = document.querySelector("#rainbow");
+rainbowButton.addEventListener("click", () => rainbowMode());
+
 function eraseSurface(){
     const oldPixels = document.querySelectorAll(".pixel");
     oldPixels.forEach(oldPixel => oldPixel.remove());
@@ -39,3 +42,15 @@ function createPixels(){
         surface.appendChild(div);
     }
 };
+
+function rainbowMode(){
+    const oldPixels = document.querySelectorAll(".pixel");
+    oldPixels.forEach(oldPixel => {
+        let randomColor_r = Math.floor(Math.random()*256) + 1;
+        let randomColor_g = Math.floor(Math.random()*256) + 1;
+        let randomColor_b = Math.floor(Math.random()*256) + 1;
+        oldPixel.addEventListener("mouseenter", () => {
+            oldPixel.style.backgroundColor = "rgb(" + randomColor_r + ", " + randomColor_g + ", " + randomColor_b + ")";
+        });
+    })
+}
