@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    text-align: center;
+}
+
+.pixel {
+    border: 1px solid red;
+    flex-grow: 1;
+    width: 98px;  
+    height: 98px;
+}
+
+#surface {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    min-width: 1600px;
+    max-width: 1600px;
+    min-height: 1600px;
+    max-height: 1600px;
+}
