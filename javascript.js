@@ -9,9 +9,11 @@ const pixelButton = document.querySelector("#pixels");
 pixelButton.addEventListener("click", () => {
     eraseSurface();
     size = Number.parseInt(prompt("Enter a value from 16 to 100.", "16"));
-    pixelWidth = (800/size) + "px";
+    if(size >= 16 && size <= 100){
+        pixelWidth = (800/size) + "px";
     totalPixels = size * size;
     createPixels();
+    }
 });
 
 const eraseButton = document.querySelector("#eraser");
